@@ -58,7 +58,7 @@ const MoreAboutMe = () => {
 
   return (
     <section className='py-24'>
-      <a href='/' className='inline-flex items-center gap-2 font-semibold mb-8 hover:underline'>
+      <a href={import.meta.env.BASE_URL} className='inline-flex items-center gap-2 font-semibold mb-8 hover:underline'>
         <ArrowLeft size={18} /> Back
       </a>
       <h2 className='text-5xl font-bold mb-4'>More About Me</h2>

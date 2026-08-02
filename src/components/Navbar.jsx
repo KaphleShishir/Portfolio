@@ -4,12 +4,14 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { GithubIcon, LinkedinIcon } from './icons';
 
+const BASE = import.meta.env.BASE_URL
+
 const NAV_LINKS = [
-    { label: 'Experience', href: '/#experience' },
-    { label: 'Projects', href: '/#projects' },
-    { label: 'Awards', href: '/#awards' },
-    { label: 'Contact', href: '/#contact' },
-    { label: 'Blog', href: '/more-about-me' },
+    { label: 'Experience', href: `${BASE}#experience` },
+    { label: 'Projects', href: `${BASE}#projects` },
+    { label: 'Awards', href: `${BASE}#awards` },
+    { label: 'Contact', href: `${BASE}#contact` },
+    { label: 'Blog', href: `${BASE}more-about-me` },
 ];
 
 const Navbar = () => {
@@ -62,7 +64,7 @@ const Navbar = () => {
   }
   return (
     <div className='flex justify-between items-center'>
-        <a href="/#top" ref={leftBoxRef} className='flex gap-3 h-fit w-fit items-center'>
+        <a href={`${BASE}#top`} ref={leftBoxRef} className='flex gap-3 h-fit w-fit items-center'>
             <Sparkle fill='black' size={50} className='rotate-45'/>
         </a>
         <div ref={rightBoxRef} className='flex gap-4 items-center relative'>

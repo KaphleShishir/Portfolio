@@ -1,3 +1,4 @@
+@import "tailwindcss";
 @font-face {
   font-family: china;
   src: url('./assets/NeueHaasDisplayRoman.ttf');
@@ -5,7 +6,7 @@
 *{
   font-family: china;
 }
-@import "tailwindcss";
+
 
 html{
   scroll-behavior: smooth;
