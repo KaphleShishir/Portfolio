@@ -14,7 +14,7 @@ I'm a Math & CS double major at the University of South Dakota, currently workin
 - **Blog** — study logs, LeetCode practice, and more about what I'm working on
 
 ## Tech Stack
-
+- **Claude**
 - **React** + **Vite**
 - **GSAP** for animations and scroll-triggered effects
 - **Tailwind CSS** for styling
