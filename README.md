@@ -1,6 +1,6 @@
-# Shishir Kaphle | Portfolio
+# Portfolio
 
-My personal portfolio website — built to showcase my experience, projects, awards, and ongoing work in mathematics, computer science.
+My personal portfolio website, built to showcase my experience, projects, awards, and ongoing work in mathematics, computer science.
 
 🔗 **Live site:**
 
