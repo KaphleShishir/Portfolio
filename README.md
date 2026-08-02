@@ -1,16 +1,27 @@
-# React + Vite
+# Shishir Kaphle | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio website — built to showcase my experience, projects, awards, and ongoing work in mathematics, computer science.
 
-Currently, two official plugins are available:
+🔗 **Live site:**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About
 
-## React Compiler
+I'm a Math & CS double major at the University of South Dakota, currently working as a Data and Outcomes Intern with South Dakota's state healthcare data. This site includes:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Experience** — internships and work history
+- **Projects** — things I've built
+- **Awards** — scholarships, grants, and recognitions
+- **Blog** — study logs, LeetCode practice, and more about what I'm working on
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** + **Vite**
+- **GSAP** for animations and scroll-triggered effects
+- **Tailwind CSS** for styling
+- **React Router** for page navigation
+
+## Contact
+
+- Email: shishirkafle07@gmail.com
+- LinkedIn: [linkedin.com/in/shishir-kaphle78](https://www.linkedin.com/in/shishir-kaphle78)
+- GitHub: [@KaphleShishir](https://github.com/KaphleShishir)
