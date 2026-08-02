@@ -9,7 +9,7 @@ const Card = (props) => {
       href={props.link || 'https://github.com/KaphleShishir'}
       target='_blank'
       rel='noreferrer'
-      className={`row_${row} col_${col} flex justify-between w-[45vw] border-2 h-65 border-black rounded-3xl shadow-[0_7px_0_0_black] py-6 pl-12 pr-3 ${isBlack ? "bg-black" : "bg-transparent"}`}
+      className={`row_${row} col_${col} flex justify-between w-full md:w-[45vw] border-2 h-65 border-black rounded-3xl shadow-[0_7px_0_0_black] py-6 pl-12 pr-3 ${isBlack ? "bg-black" : "bg-transparent"}`}
     >
         <div className='h-full w-2/3 flex flex-col justify-between items-start'>
             <div>

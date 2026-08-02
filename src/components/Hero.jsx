@@ -109,10 +109,10 @@ gsap.to(imageRef.current, {
 
 return (
 <>
-      <div id="top" className='h-[55vh] mt-5 flex'>
-          <div ref={leftBoxRef} className='w-1/3 h-full flex flex-col justify-between py-20'>
+      <div id="top" className='md:h-[55vh] mt-5 flex flex-col md:flex-row gap-10 md:gap-0'>
+          <div ref={leftBoxRef} className='w-full md:w-1/3 md:h-full flex flex-col justify-between py-6 md:py-20 order-2 md:order-1'>
               <div>
-                <h2 className='text-6xl font-bold leading-tight'>Shishir Kaphle</h2>
+                <h2 className='text-5xl md:text-6xl font-bold leading-tight'>Shishir Kaphle</h2>
                 <p className='text-lg font-semibold mt-3'>Data and Outcomes Intern at SD DSS | CS &amp; Math @ USD</p>
                 <p className='text-base text-gray-700 mt-4 max-w-md'>I like understanding the math behind things.</p>
                 <p className='text-base text-gray-700 mt-4 max-w-md'>Currently applying that to large-scale state healthcare data — building inclusive, WCAG-compliant Power BI dashboards and automating workflows with Power Automate.</p>
@@ -124,14 +124,14 @@ return (
                 </a>
               </div>
           </div>
-          <div  ref={particleBoxRef} onMouseMove={generateParticle} className='w-2/3 h-full relative flex justify-end items-center perspective-[1000px] overflow-hidden'>
+          <div  ref={particleBoxRef} onMouseMove={generateParticle} className='w-full md:w-2/3 md:h-full relative flex justify-center md:justify-end items-center perspective-[1000px] overflow-hidden order-1 md:order-2'>
               <img
 onMouseMove={handleMouseMove}
 onMouseLeave={handleMouseLeave}
 ref={imageRef}
 src={profilePhoto}
 alt="Shishir Kaphle"
-className='w-[28vw] h-[28vw] rounded-full object-cover object-top border-2 border-black'
+className='w-56 h-56 md:w-[28vw] md:h-[28vw] rounded-full object-cover object-top border-2 border-black'
 />
           </div>
       </div>

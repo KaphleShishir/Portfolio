@@ -6,7 +6,7 @@ import MoreAboutMe from './pages/MoreAboutMe'
 const App = () => {
 
   return (
-   <main className='bg-[#e4e2e2] min-h-screen px-12 py-8 overflow-x-hidden'>
+   <main className='bg-[#e4e2e2] min-h-screen px-6 md:px-12 py-8 overflow-x-hidden'>
      <Navbar />
      <Routes>
        <Route path='/' element={<Home />} />

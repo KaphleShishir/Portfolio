@@ -25,7 +25,7 @@ const Certifications = () => {
     <section id="certifications" className='py-24'>
       <h2 className='text-5xl font-bold mb-12'>Certifications</h2>
       <div ref={boxRef} className='flex flex-wrap gap-6'>
-        <div className='certification-item flex gap-4 items-start border-2 border-black rounded-2xl p-6 w-[30vw] opacity-60'>
+        <div className='certification-item flex gap-4 items-start border-2 border-black rounded-2xl p-6 w-full md:w-[30vw] opacity-60'>
           <BadgeCheck size={32} className='shrink-0' />
           <div>
             <h3 className='text-xl font-bold leading-tight'>Coming soon</h3>

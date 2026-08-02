@@ -78,7 +78,7 @@ const Awards = () => {
             <Wrapper
               key={item.title}
               {...linkProps}
-              className={`award-item flex gap-4 items-start text-left border-2 border-black rounded-2xl p-6 w-[30vw] ${item.link ? 'hover:bg-black hover:text-white transition-colors' : ''} ${item.description ? 'cursor-pointer' : ''}`}
+              className={`award-item flex gap-4 items-start text-left border-2 border-black rounded-2xl p-6 w-full md:w-[30vw] ${item.link ? 'hover:bg-black hover:text-white transition-colors' : ''} ${item.description ? 'cursor-pointer' : ''}`}
             >
               <Award size={32} className='shrink-0' />
               <div>

@@ -1,5 +1,5 @@
-import { useRef } from 'react'
-import { Sparkle } from 'lucide-react';
+import { useRef, useState } from 'react'
+import { Sparkle, Menu, X } from 'lucide-react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { GithubIcon, LinkedinIcon } from './icons';
@@ -18,6 +18,7 @@ const Navbar = () => {
     const leftBoxRef = useRef(null)
     const rightBoxRef = useRef(null)
     const particleBoxRef = useRef(null)
+    const [menuOpen, setMenuOpen] = useState(false)
   useGSAP(()=>{
     var tl = gsap.timeline()
     tl.from(leftBoxRef.current.children,{
@@ -63,20 +64,41 @@ const Navbar = () => {
 
   }
   return (
-    <div className='flex justify-between items-center'>
-        <a href={`${BASE}#top`} ref={leftBoxRef} className='flex gap-3 h-fit w-fit items-center'>
-            <Sparkle fill='black' size={50} className='rotate-45'/>
-        </a>
-        <div ref={rightBoxRef} className='flex gap-4 items-center relative'>
-            <div className='navoptions flex gap-4 items-center relative'>
-                <div ref={particleBoxRef} className='absolute h-full w-full top-0 left-0 pointer-events-none'></div>
-                {NAV_LINKS.map((link)=>(
-                    <a key={link.label} href={link.href} onMouseEnter={(e)=>{generateParticle(e)}} className='text-base font-bold cursor-pointer relative overflow-hidden border border-gray-400'><span className='relative z-20'>{link.label}</span></a>
-                ))}
-            </div>
-            <a href="https://github.com/KaphleShishir" target="_blank" rel="noreferrer" className='p-2 border border-gray-400 rounded-full hover:bg-black hover:text-white transition-colors'><GithubIcon size={20}/></a>
-            <a href="https://www.linkedin.com/in/shishir-kaphle78" target="_blank" rel="noreferrer" className='p-2 border border-gray-400 rounded-full hover:bg-black hover:text-white transition-colors'><LinkedinIcon size={20}/></a>
-        </div>
+    <div className='relative'>
+      <div className='flex justify-between items-center'>
+          <a href={`${BASE}#top`} ref={leftBoxRef} className='flex gap-3 h-fit w-fit items-center'>
+              <Sparkle fill='black' size={50} className='rotate-45'/>
+          </a>
+          <div ref={rightBoxRef} className='hidden md:flex gap-4 items-center relative'>
+              <div className='navoptions flex gap-4 items-center relative'>
+                  <div ref={particleBoxRef} className='absolute h-full w-full top-0 left-0 pointer-events-none'></div>
+                  {NAV_LINKS.map((link)=>(
+                      <a key={link.label} href={link.href} onMouseEnter={(e)=>{generateParticle(e)}} className='text-base font-bold cursor-pointer relative overflow-hidden border border-gray-400'><span className='relative z-20'>{link.label}</span></a>
+                  ))}
+              </div>
+              <a href="https://github.com/KaphleShishir" target="_blank" rel="noreferrer" className='p-2 border border-gray-400 rounded-full hover:bg-black hover:text-white transition-colors'><GithubIcon size={20}/></a>
+              <a href="https://www.linkedin.com/in/shishir-kaphle78" target="_blank" rel="noreferrer" className='p-2 border border-gray-400 rounded-full hover:bg-black hover:text-white transition-colors'><LinkedinIcon size={20}/></a>
+          </div>
+          <button
+              type='button'
+              onClick={() => setMenuOpen((open) => !open)}
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              className='md:hidden p-2 border border-gray-400 rounded-full'
+          >
+              {menuOpen ? <X size={22}/> : <Menu size={22}/>}
+          </button>
+      </div>
+      {menuOpen && (
+          <div className='md:hidden absolute right-0 top-[calc(100%+0.75rem)] z-30 flex flex-col gap-1 border-2 border-black rounded-2xl p-4 bg-[#e4e2e2] w-64'>
+              {NAV_LINKS.map((link)=>(
+                  <a key={link.label} href={link.href} onClick={() => setMenuOpen(false)} className='text-base font-bold py-2 px-2 rounded-lg hover:bg-black hover:text-white transition-colors'>{link.label}</a>
+              ))}
+              <div className='flex gap-3 items-center pt-2 mt-2 border-t border-gray-400'>
+                  <a href="https://github.com/KaphleShishir" target="_blank" rel="noreferrer" className='p-2 border border-gray-400 rounded-full hover:bg-black hover:text-white transition-colors'><GithubIcon size={20}/></a>
+                  <a href="https://www.linkedin.com/in/shishir-kaphle78" target="_blank" rel="noreferrer" className='p-2 border border-gray-400 rounded-full hover:bg-black hover:text-white transition-colors'><LinkedinIcon size={20}/></a>
+              </div>
+          </div>
+      )}
     </div>
   )
 }
